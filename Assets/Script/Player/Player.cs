@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour//, IDamageable
 {
+    public List<Collider> colliders;
     public Animator animator;
     public CharacterController characterController;
     public float speed = 1f;
@@ -22,14 +23,53 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Flash")]
     public List<FlashColor> flashColors;
 
+    [Header("Life")]
+    public HealthBase healthBase;
+    //public UIGunUpdater iGunUpdater;
+
+    private bool _alive = true;
+
+    public void OnValidate()
+    {
+        if(healthBase == null) healthBase = GetComponent<HealthBase>();
+    }
+    public void Awake()
+    {
+        OnValidate();
+        healthBase.OnDamage += Damage;
+        healthBase.OnKill += OnKill;
+    }
     #region LIFE
-    public void Damage(float damage)
+    private void OnKill(HealthBase h)
+     {
+        if (_alive)
+        {
+            _alive = false;
+            animator.SetTrigger("Death");
+            colliders.ForEach(i => i.enabled = false);
+
+            Invoke(nameof(Revive), 3f);
+        }
+     }
+    private void Revive() 
+    {
+        _alive = true;
+        healthBase.ResetLife();
+        animator.SetTrigger("Revive");
+        Respaw();
+        Invoke(nameof(TurnOnColliders), .1f);
+    }
+    private void TurnOnColliders()
+    {
+        colliders.ForEach(i => i.enabled = true);
+    }
+    public void Damage(HealthBase h)
     {
         flashColors.ForEach(i => i.Flash());
     }
     public void Damage(float damage, Vector3 dir)
     {
-        Damage(damage);
+       // Damage(damage);
     }
     #endregion
     private void Update()
@@ -64,9 +104,6 @@ public class Player : MonoBehaviour, IDamageable
                animator.speed = 1;
             }
         }
-
-
-
         characterController.Move(speedVector * Time.deltaTime);
 
         if(inputAxisVertical != 0)
@@ -78,4 +115,15 @@ public class Player : MonoBehaviour, IDamageable
             animator.SetBool("Run", false);
         }
     }
+
+    [NaughtyAttributes.Button]
+    public void Respaw()
+    {
+        if (CheckpointManager.Instance.HasCheckpoint())
+        {
+            transform.position = CheckpointManager.Instance.GetPositionFromLastCheckpoint();    
+        }
+
+    }
+
 }
