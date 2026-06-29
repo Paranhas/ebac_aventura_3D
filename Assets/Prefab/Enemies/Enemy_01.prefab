@@ -4972,7 +4972,8 @@ MonoBehaviour:
   colliderDamage: {fileID: 3220444152912241878}
   flashColor: {fileID: 6294510096117673009}
   particleSystem: {fileID: 3931000846313341748}
-  startLife: 10
+  startLife: 2
+  lookAtPlayer: 0
   _currentLife: 0
   _animationBase: {fileID: 2543710772662051614}
   startAnimationDuration: 0.2

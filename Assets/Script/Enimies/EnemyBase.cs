@@ -13,7 +13,7 @@ namespace Enemy
         //nas aulas esse colliderDamage é collider
         public Collider colliderDamage;
         public FlashColor flashColor;
-        public ParticleSystem particleSystem;
+        public ParticleSystem _particleSystem;
         public float startLife = 10f;
         public bool lookAtPlayer = false;
 
@@ -68,7 +68,7 @@ namespace Enemy
         public void OnDamage(float f)
         {
             if(flashColor != null)flashColor.Flash();
-            if (particleSystem != null) particleSystem.Emit(7);
+            if (_particleSystem != null) _particleSystem.Emit(7);
             transform.position -= transform.forward;
             _currentLife -= f;
             if(_currentLife <= 0) 
