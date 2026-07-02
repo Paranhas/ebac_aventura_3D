@@ -1147,6 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184189623}
   - component: {fileID: 184189622}
+  - component: {fileID: 184189624}
   m_Layer: 0
   m_Name: Virtual Camera (1)
   m_TagString: Untagged
@@ -1209,6 +1210,23 @@ Transform:
   - {fileID: 1877729212}
   m_Father: {fileID: 324792885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184189624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184189621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032d956c9d271ec4986a666aa3c8d440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 184189622}
+  shakeTime: 0
+  amplitude: 3
+  frequency: 3
+  time: 0.2
 --- !u!21 &211912536
 Material:
   serializedVersion: 8
@@ -3962,7 +3980,6 @@ GameObject:
   - component: {fileID: 686918037}
   - component: {fileID: 686918036}
   - component: {fileID: 686918035}
-  - component: {fileID: 686918038}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -4046,23 +4063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &686918038
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686918033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-  m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
-  m_FrequencyGain: 0
-  mNoiseOffsets: {x: -911.6194, y: -195.85428, z: 382.18927}
 --- !u!1 &703365567
 GameObject:
   m_ObjectHideFlags: 3
@@ -8382,7 +8382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1274178135}
   - component: {fileID: 1274178134}
-  - component: {fileID: 1274178136}
   m_Layer: 0
   m_Name: Virtual Camera (2)
   m_TagString: Untagged
@@ -8445,23 +8444,6 @@ Transform:
   - {fileID: 686918034}
   m_Father: {fileID: 324792885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1274178136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274178133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032d956c9d271ec4986a666aa3c8d440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1274178134}
-  shakeTime: 0
-  amplitude: 3
-  frequency: 3
-  time: 0.2
 --- !u!1001 &1275235688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10113,7 +10095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.98532784, z: 0, w: 0.17067236}
+  m_LocalRotation: {x: -0.000000012825719, y: 0.98532784, z: 0.00000007404561, w: 0.17067236}
   m_LocalPosition: {x: 405.868, y: -5.215, z: 63.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13200,6 +13182,7 @@ GameObject:
   - component: {fileID: 1877729215}
   - component: {fileID: 1877729214}
   - component: {fileID: 1877729213}
+  - component: {fileID: 1877729216}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -13283,6 +13266,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1877729216
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877729211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
+  mNoiseOffsets: {x: -887.82837, y: 433.7618, z: -781.5182}
 --- !u!1001 &1889132732
 PrefabInstance:
   m_ObjectHideFlags: 0
