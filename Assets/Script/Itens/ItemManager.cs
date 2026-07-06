@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.PackageManager.Requests;
@@ -17,6 +17,7 @@ namespace Itens
     public class ItemManager : Singleton<ItemManager>
     {
         public List<ItemSetup> itensSetups;
+        public static Action<ItemType> OnItemCollected;
 
         private void Start()
         {
@@ -40,6 +41,7 @@ namespace Itens
         {
             if(amount <= 0) return; 
             itensSetups.Find(i => i.itemType == itemType).soInt.value += amount;
+            OnItemCollected?.Invoke(itemType);  // ← adiciona esta linha
         }
         public void RemoveByType(ItemType itemType, int amount = 1) 
         {
