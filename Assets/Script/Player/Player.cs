@@ -17,6 +17,7 @@ public class Player : Singleton<Player>//, IDamageable
     public float jumpSpeed = 15f;
 
     public KeyCode jumpKeyCode = KeyCode.Space;
+    private bool _jumping = false;
 
     [Header("Run Setup")]
     public KeyCode keyRun = KeyCode.LeftShift;
@@ -31,6 +32,7 @@ public class Player : Singleton<Player>//, IDamageable
 
     [Space]
     [SerializeField]private ClothChanger _clothChanger;
+
 
     private bool _alive = true;
 
@@ -84,12 +86,24 @@ public class Player : Singleton<Player>//, IDamageable
         transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime, 0);
         var inputAxisVertical = Input.GetAxis("Vertical");
         var speedVector = transform.forward * inputAxisVertical * speed;
+        
         if (characterController.isGrounded)
         {
+            if(_jumping)
+            {
+                _jumping = false;
+                animator.SetTrigger("Land");
+            }
             vSpeed = 0;
             if (Input.GetKeyDown(jumpKeyCode))
             {
                 vSpeed = jumpSpeed;
+                if (!_jumping)
+                {
+                    _jumping = true;
+                    animator.SetTrigger("Jump");
+                }
+                
             }
         }
 
