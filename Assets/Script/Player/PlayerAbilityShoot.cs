@@ -12,6 +12,7 @@ public class PlayerAbilityShoot : PlayerAbilityBase
 
     private List<GunBase> _guns = new();
     private GunBase _currentGun;
+    public FlashColor _flashColor;
     private int _currentGunIndex;
 
     protected override void Init()
@@ -81,6 +82,7 @@ public class PlayerAbilityShoot : PlayerAbilityBase
     private void StartShoot()
     {
         _currentGun?.StartShoot();
+        _flashColor?.Flash();
     }
 
     private void CancelShoot()

@@ -1444,6 +1444,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3395718391368752824, guid: a44e8ba905df7d440abebf2e3e2f9f64, type: 3}
   m_PrefabInstance: {fileID: 933091212}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &265312411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5201870292534443217, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 1755247079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f3edf2f31a7af43939bf17c7326909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &269198646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5117,6 +5128,7 @@ MonoBehaviour:
   - {fileID: 2071288382818841207, guid: e19d5a169de98604685ee4b03dba821a, type: 3}
   - {fileID: 3163188481129334700, guid: e20c58097dac9f24794a4e853cfed8a7, type: 3}
   gunPosition: {fileID: 1689849987}
+  _flashColor: {fileID: 265312411}
 --- !u!65 &730914528
 BoxCollider:
   m_ObjectHideFlags: 0
