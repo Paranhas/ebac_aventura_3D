@@ -15,6 +15,8 @@ namespace Cloth
     public class ClothManager : Singleton<ClothManager>
     {
         public List<ClothSetup> clothSetup;
+        //teste
+        public ClothType currentCloth = ClothType.SPEED;
 
         public ClothSetup GetSetupByType(ClothType clothType)
         {

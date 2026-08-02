@@ -44,7 +44,7 @@ public class SaveManager : Singleton<SaveManager>
     {
         _saveSetup.coins = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.COIN).soInt.value;
         _saveSetup.health = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.LIFE_PACK).soInt.value;
-        //_saveSetup.cloth = (Texture2D)Cloth.ClothManager.Instance.GetSetupByType(Cloth.ClothType.SPEED).soInt.value;
+        _saveSetup.cloth = Cloth.ClothManager.Instance.currentCloth;
         Save();
     }
     public void SaveLastLevel(int level )
@@ -69,6 +69,8 @@ public class SaveManager : Singleton<SaveManager>
             fileLoaded = File.ReadAllText(_path);
             _saveSetup = JsonUtility.FromJson<SaveSetup>(fileLoaded);
             lastLevel = _saveSetup.lastLevel;
+            //teste
+            Cloth.ClothManager.Instance.currentCloth = _saveSetup.cloth;
         }
         else 
         {
@@ -93,6 +95,6 @@ public class SaveSetup
     public int lastLevel;
     public float coins;
     public float health;
-    //public float cloth;
+    public Cloth.ClothType cloth;
     public string playerName;
 }
