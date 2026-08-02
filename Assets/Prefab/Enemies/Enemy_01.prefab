@@ -4971,7 +4971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderDamage: {fileID: 3220444152912241878}
   flashColor: {fileID: 6294510096117673009}
-  particleSystem: {fileID: 3931000846313341748}
+  _particleSystem: {fileID: 0}
   startLife: 2
   lookAtPlayer: 0
   _currentLife: 0
@@ -4979,6 +4979,21 @@ MonoBehaviour:
   startAnimationDuration: 0.2
   startAnimationEase: 27
   starWithBornAnimation: 1
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3220444152912241878
 BoxCollider:
   m_ObjectHideFlags: 0
