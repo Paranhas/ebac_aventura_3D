@@ -7203,6 +7203,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 0d4af6a2c201403418355714b0ceb9cb, type: 3}
   - clothType: 2
     texture: {fileID: 2800000, guid: 3d9b908783cfd1541934985eb0a6576d, type: 3}
+  currentCloth: 0
 --- !u!4 &345144131
 Transform:
   m_ObjectHideFlags: 0
@@ -8642,7 +8643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553366370}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2192894, y: 0.2728652, z: -0.06402798, w: 0.9345358}
+  m_LocalRotation: {x: 0.21928944, y: 0.2728652, z: -0.064028, w: 0.9345358}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10779,7 +10780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &816688294
 Transform:
   m_ObjectHideFlags: 0
@@ -15476,7 +15477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394311645}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2022995, y: 0.2739819, z: -0.059067283, w: 0.9383603}
+  m_LocalRotation: {x: 0.2022995, y: 0.27398187, z: -0.05906729, w: 0.9383603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20119,7 +20120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868509880}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23625189, y: 0.2716554, z: -0.06898067, w: 0.93039244}
+  m_LocalRotation: {x: 0.2362519, y: 0.27165544, z: -0.068980694, w: 0.93039244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

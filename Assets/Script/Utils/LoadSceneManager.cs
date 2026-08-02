@@ -9,4 +9,8 @@ public class LoadSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene(level);  
     }
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(SaveManager.Instance.lastLevel);
+    }
 }

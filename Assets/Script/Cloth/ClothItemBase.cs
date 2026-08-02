@@ -8,7 +8,7 @@ namespace Cloth
     public class ClothItemBase : MonoBehaviour
     {
         public ClothType clothType;
-        public float duration= 2f;
+        public float duration= 600f;
         public string compareTag = "Player";
         private void OnTriggerEnter(Collider collision)
         {
