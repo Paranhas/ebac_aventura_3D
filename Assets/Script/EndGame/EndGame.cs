@@ -31,7 +31,7 @@ public class EndGame : MonoBehaviour
         {
             i.SetActive(true);
             i.transform.DOScale(0, .2f).SetEase(Ease.OutBack).From();
-            //SaveManager.Instance.SaveLastLevel(_currentLevel);
+            SaveManager.Instance.SaveLastLevel(_currentLevel);
         }
 
     }
