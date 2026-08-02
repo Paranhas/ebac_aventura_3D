@@ -45,6 +45,7 @@ public class SaveManager : Singleton<SaveManager>
         _saveSetup.coins = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.COIN).soInt.value;
         _saveSetup.health = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.LIFE_PACK).soInt.value;
         _saveSetup.cloth = Cloth.ClothManager.Instance.currentCloth;
+        _saveSetup.checkpointKey = CheckpointManager.Instance.lastCheckpointKey;
         Save();
     }
     public void SaveLastLevel(int level )
@@ -97,4 +98,5 @@ public class SaveSetup
     public float health;
     public Cloth.ClothType cloth;
     public string playerName;
+    public int checkpointKey;
 }

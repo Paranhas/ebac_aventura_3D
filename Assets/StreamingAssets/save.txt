@@ -1,7 +1,8 @@
 {
     "lastLevel": 1,
-    "coins": 6.0,
-    "health": 2.0,
-    "cloth": 0,
-    "playerName": "Player1"
+    "coins": 10.0,
+    "health": 1.0,
+    "cloth": 2,
+    "playerName": "Player1",
+    "checkpointKey": 2
 }
