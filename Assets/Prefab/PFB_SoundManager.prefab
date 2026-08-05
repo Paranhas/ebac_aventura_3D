@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2947950797528687153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5635354543576279407}
+  - component: {fileID: 8717403006149860764}
+  m_Layer: 0
+  m_Name: PFB_SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5635354543576279407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947950797528687153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 415.02582, y: -13.615254, z: 33.706375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8717403006149860764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947950797528687153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b598c3615f14504bb98e1b55e09293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSetups:
+  - musicType: 0
+    audioClip: {fileID: 8300000, guid: dc30d40c2e841aa4e85ff124f8d2b702, type: 3}
+  - musicType: 1
+    audioClip: {fileID: 8300000, guid: cc6cab8c51deb8246b2d770a6c67a47d, type: 3}
+  - musicType: 2
+    audioClip: {fileID: 8300000, guid: d4a3833239257324ab63a7a437c10078, type: 3}
+  sfxSetups:
+  - sfxType: 0
+    audioClip: {fileID: 0}
+  - sfxType: 0
+    audioClip: {fileID: 8300000, guid: 3445a8b2782c4134985eb470cc656b10, type: 3}
+  - sfxType: 1
+    audioClip: {fileID: 8300000, guid: 06a0420f8524f54458b313c29fbfd2b1, type: 3}
+  - sfxType: 2
+    audioClip: {fileID: 8300000, guid: d18a72499ba58dd40a0e379085d24c94, type: 3}
+  musicSource: {fileID: 0}
