@@ -8,6 +8,7 @@ namespace Itens
 {
     public class ItemCollectableBase : MonoBehaviour
     {
+        public SFXType sfxType;
         public ItemType itemType;
         public string compareTag = "Player";
         public ParticleSystem _particleSystem;
@@ -30,9 +31,13 @@ namespace Itens
                 Collect();
             }
         }
-
+        public void PlaySFX()
+        {
+            SFXPool.Instance.Play(sfxType);
+        }
         protected virtual void Collect()
         {
+            PlaySFX();
             if(_collider != null) { _collider.enabled = false; }    
             if (graphicItem != null) { graphicItem.SetActive(false); }
             Invoke("HideObject", timeToHide);
