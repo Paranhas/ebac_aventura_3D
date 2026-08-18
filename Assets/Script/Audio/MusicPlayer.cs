@@ -19,4 +19,5 @@ public class MusicPlayer : MonoBehaviour
         audioSource.clip = _currentMusicSetup.audioClip;
         audioSource.Play();
     }
+  
 }

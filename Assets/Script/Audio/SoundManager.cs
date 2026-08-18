@@ -9,6 +9,13 @@ public class SoundManager :Singleton<SoundManager>
     public List<SFXSetup> sfxSetups;
 
     public AudioSource musicSource;
+
+    private void Start()
+    {
+        AudioListener.volume = 1f;
+    }
+
+
     public void PlaymusciByType(MusicType musicType) 
     {
         var music = GetMusicByType(musicType);
@@ -22,6 +29,10 @@ public class SoundManager :Singleton<SoundManager>
     public SFXSetup GetSFXByType(SFXType sfxType)
     {
         return sfxSetups.Find(i => i.sfxType == sfxType);
+    }
+    public void OffAudio(bool muted)
+    {
+        AudioListener.volume = muted ? 0f : 1f;
     }
 
 
@@ -44,7 +55,10 @@ public enum SFXType
     NONE,
     TYPE_01,
     TYPE_02,
-    TYPE_03
+    TYPE_03,
+    TYPE_04,
+    TYPE_05,
+    TYPE_06
 }
 
 [System.Serializable]
